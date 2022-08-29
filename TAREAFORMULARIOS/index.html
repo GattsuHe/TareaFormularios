@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form
+      method="get"
+      enctype="application/x-www-form-urlencoded"
+      action="/html/codes/html_form_handler.cfm"
+    >
+      <p>
+        <label
+          >Nombre
+          <input type="text" name="nombre_cliente" required />
+        </label>
+      </p>
+
+      <p>
+        <label
+          >Telefono
+          <input type="tel" name="numero_telefono" />
+        </label>
+      </p>
+
+      <p>
+        <label
+          >Email
+          <input type="email" name="direccion_correo" />
+        </label>
+      </p>
+
+      <fieldset>
+        <legend>Qué tipo de atención quiere?</legend>
+        <p>
+          <label>
+            <input type="radio" name="taxi" required value="car" /> Consulta general
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="radio" name="taxi" required value="van" /> Examenes medicos
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="radio" name="taxi" required value="tuktuk" /> Pediatria
+          </label>
+        </p>
+      </fieldset>
+
+
+****************************************
+
+      <p>
+        <label
+          >Dia hora?
+          <input type="datetime-local" name="fecha_hora" required />
+        </label>
+      </p>
+
+      <p>
+        <label>Lugar para recojer
+          <select id="pickup_place" name="pickup_place">
+            <option value="" selected="selected">Seleccion Opción</option>
+            <option value="10">Jutiapa</option>
+            <option value="11">Jalapa</option>
+            <option value="12">el progreso</option>
+          </select>
+        </label>
+      </p>
+
+      <p>
+        <label
+          >Necesita Ambulancia
+          <input type="text" name="dropoff_place" required list="destino" />
+        </label>
+
+        <datalist id="destino">
+          <option value="amnbulancia"></option>
+          <option value="Playa">Si</option>
+          <option value="La U">No</option>
+        </datalist>
+      </p>
+
+      <p>
+        <label
+          >Instrucciones especiales
+          <textarea name="comentarios" maxlength="500"></textarea>
+        </label>
+      </p>
+
+      <p><button>Hacer Cita</button></p>
+    </form>
+  </body>
+  
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form
+      method="get"
+      enctype="application/x-www-form-urlencoded"
+      action="/html/codes/html_form_handler.cfm"
+    >
+      <p>
+        <label
+          >Nombre
+          <input type="text" name="nombre_cliente" required />
+        </label>
+      </p>
+
+      <p>
+        <label
+          >Telefono
+          <input type="tel" name="numero_telefono" />
+        </label>
+      </p>
+
+      <p>
+        <label
+          >Email
+          <input type="email" name="direccion_correo" />
+        </label>
+      </p>
+
+      <fieldset>
+        <legend>Qué Tipo de empleo quiere?</legend>
+        <p>
+          <label>
+            <input type="radio" name="empleo" required value="Tecnico" /> Tecnico
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="radio" name="empleo" required value="Oficina" /> Oficina
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="radio" name="empleo" required value="tuktuk" /> de campo
+          </label>
+          <label>
+            <input type="radio" name="empleo" required value="mixto" /> Mixto
+          </label>
+        </p>
+      </fieldset>
+
+
+****************************************
+
+
+
+      <fieldset>
+        <legend>Tiempo de experiencia laboral/legend>
+        <p>
+          <label>
+            <input type="checkbox" name="extras" value="ano" /> Sin experiencia
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" name="extras" value="maso" /> Menos de un año
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" name="extras" value="mas" /> Más de dos años
+          </label>
+        </p>
+      </fieldset>
+
+      <p>
+        <label
+          >Dia hora disponible para empezar a laborar?
+          <input type="datetime-local" name="fecha_hora" required />
+        </label>
+      </p>
+
+      <p>
+        <label>Lugar para trabajar de preferencia
+          <select id="pickup_place" name="pickup_place">
+            <option value="" selected="selected">Seleccion Opción</option>
+            <option value="10">Jutiapa</option>
+            <option value="11">Jalapa</option>
+            <option value="12">Guatemala</option>
+            <option value="13">Santa Rosa</option>
+          </select>
+        </label>
+      </p>
+
+      <p>
+        <label
+          >Dejar en
+          <input type="text" name="dropoff_place" required list="destino" />
+        </label>
+
+ 
+
+      <p>
+        <label
+          >Comentarios
+          <textarea name="comentarios" maxlength="500"></textarea>
+        </label>
+      </p>
+
+      <p><button>Hacer Cita</button></p>
+    </form>
+  </body>
+  
+</html>
